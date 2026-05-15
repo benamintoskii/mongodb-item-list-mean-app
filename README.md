@@ -1,68 +1,122 @@
 # Premium Item Display - MEAN Stack Application
 
-A beautifully designed, full-stack web application built using the MEAN stack (MongoDB, Express.js, Angular, Node.js). This project demonstrates a clean architecture for fetching and displaying a premium curated list of items.
+A simple full-stack web application built with the MEAN stack (MongoDB, Express.js, Angular, and Node.js).
+
+This project demonstrates how to fetch and display a list of items stored in a MongoDB database through a REST API using an Angular frontend.
+
+---
 
 ## Features
 
-*   **Modern Frontend**: Built with Angular 17+, featuring a responsive, dynamic UI with glassmorphism aesthetics, fluid micro-animations, and modern typography.
-*   **Robust Backend**: Express.js REST API providing seamless data retrieval.
-*   **Zero-Setup Database**: Utilizes `mongodb-memory-server` to automatically spin up a fully functional, in-memory MongoDB instance on launch. No local database installation or configuration is required to run this project!
-*   **Automated Seeding**: The database automatically populates with sample premium product data upon startup.
+- Angular frontend for displaying item data
+- Express.js REST API backend
+- MongoDB integration using `mongodb-memory-server`
+- Automatic database seeding with sample data
+- Responsive and clean UI
+- Simple MEAN stack project structure
+
+---
+
+## Tech Stack
+
+- MongoDB (`mongodb-memory-server`)
+- Express.js
+- Angular
+- Node.js
+
+---
 
 ## Prerequisites
 
-*   [Node.js](https://nodejs.org/) (v18 or higher recommended)
-*   [npm](https://www.npmjs.com/) (Node Package Manager)
-*   [Angular CLI](https://angular.io/cli) (Optional, but recommended for development)
+Before running the project, make sure you have installed:
+
+- Node.js (v18 or later recommended)
+- npm
+- Angular CLI (optional but recommended)
+
+---
 
 ## Getting Started
-
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
-cd <your-repository-directory>
+git clone https://github.com/benamintoskii/mongodb-item-list-mean-app.git
+cd mongodb-item-list-mean-app
 ```
 
-### 2. Start the Backend Server
+---
 
-The backend requires dependencies to be installed first. Once started, it will automatically download the necessary MongoDB binaries (only on the very first run), start the in-memory database, seed the data, and listen for incoming API requests.
+### 2. Start the Backend
 
 ```bash
-# Navigate to the backend directory
 cd backend
-
-# Install dependencies
 npm install
-
-# Start the Express server
 npm start
 ```
 
-The backend server will run on `http://localhost:3000`.
-
-### 3. Start the Frontend Application
-
-Open a new terminal window/tab to start the Angular frontend.
+The backend server will run on:
 
 ```bash
-# Navigate to the frontend directory
+http://localhost:3000
+```
+
+---
+
+### 3. Start the Frontend
+
+Open a new terminal window and run:
+
+```bash
 cd frontend
-
-# Install dependencies
 npm install
-
-# Start the Angular development server
 npm start
 ```
 
-The frontend application will compile and become available at `http://localhost:4200`.
+The Angular frontend will run on:
 
-## Tech Stack
+```bash
+http://localhost:4200
+```
 
-*   **MongoDB**: In-memory NoSQL database (`mongodb-memory-server`)
-*   **Express.js**: Backend web application framework
-*   **Angular**: Frontend framework
-*   **Node.js**: JavaScript runtime environment
+---
+
+## API Endpoint
+
+```http
+GET /api/items
+```
+
+Returns a list of sample items from the MongoDB database.
+
+---
+
+## Project Structure
+
+```bash
+mongodb-item-list-mean-app/
+│
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
+│
+├── frontend/
+│   └── src/
+│
+└── README.md
+```
+
+---
+
+## Notes
+
+- The project uses `mongodb-memory-server`, so no external MongoDB installation is required.
+- Sample data is automatically seeded when the backend server starts.
+
+---
+
+## Author
+
+GitHub:  
+https://github.com/benamintoskii
